@@ -13,7 +13,11 @@
   <body>
     <script type="text/javascript" src="./main.js"></script>
     <form
-      action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="POST"
+      autocomplete="off"
+      onsubmit="onSubmit()"
+    >
       <div>
         <fieldset class="fieldset">
           <legend>Personal information</legend>
@@ -23,7 +27,6 @@
           type="text"
           id="sname"
           name="Surname"
-          autocomplete="off"
           >
           <br>
 
@@ -32,7 +35,6 @@
           type="text"
           id="name"
           name="Name"
-          autocomplete="off"
           >
           <br>
 
@@ -44,7 +46,6 @@
           value="12"
           max="100"
           min="0"
-          autocomplete="off"
           >
           <br>
 
@@ -75,7 +76,6 @@
           name="E-mail"
           maxlength="70"
           placeholder="email@example.com"
-          autocomplete="off"
           >
           <br>
 
@@ -85,7 +85,6 @@
           id="psw"
           name="Password"
           minlength="8"
-          autocomplete="off"
           >
         </fieldset>
 
@@ -114,7 +113,7 @@
           <input
           type="color"
           id="favcolor"
-           name="favcolor"
+          name="favcolor"
           value="#000"
           >
           <br>
@@ -160,7 +159,6 @@
             <textarea
             id="comments"
             name="comments"
-            autocomplete="off"
             >
             </textarea>
           </div>
@@ -172,11 +170,7 @@
           </select>
         </fieldset>
 
-        <input
-        type="submit"
-        value="Submit"
-        onsubmit="onSubmit()"
-        >
+        <button type="submit">Submit</button>
       </div>
     </form>
   </body>
